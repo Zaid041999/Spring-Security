@@ -44,7 +44,7 @@ public class PostServiceImpl implements PostService {
         return modelMapper.map(postEntity,PostDTO.class);
     }
 
-    @Override
+   /* @Override
     public PostDTO updatePost(PostDTO inputPost, Long postId) {
         PostEntity olderPost =postRepository
                 .findById(postId).
@@ -54,5 +54,5 @@ public class PostServiceImpl implements PostService {
         olderPost.setId(postId);
         PostEntity savedPost = postRepository.save(olderPost);
         return modelMapper.map(savedPost, PostDTO.class);
-    }
+    }*/
 }

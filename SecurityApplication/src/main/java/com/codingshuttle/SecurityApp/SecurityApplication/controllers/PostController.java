@@ -14,7 +14,8 @@ import java.util.List;
 public class PostController {
     private final PostService postService;
 
-    @GetMapping(path = "/get-all-post")
+    //@GetMapping(path = "/get-all-post")
+    @GetMapping
     public List<PostDTO> getAllPost()
     {
         return postService.getAllPost();
@@ -32,13 +33,13 @@ public class PostController {
         return postService.createNewPost(inputPost);
     }
 
-    @PutMapping(path = "update-post/{postId}")
+   /* @PutMapping(path = "update-post/{postId}")
     public PostDTO updatePost(@RequestBody PostDTO inputPost,
                               @PathVariable Long postId)
     {
         return postService.updatePost(inputPost,postId);
     }
-
+*/
 
 
 }
